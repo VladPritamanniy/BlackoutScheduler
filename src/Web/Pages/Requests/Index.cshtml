@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+
+<form method="post">
+    <button asp-page-handler="GetNotAssignedAddresses">Відібрати адреси, яким не назначено групу.</button>
+</form>
+
+<form method="post">
+    <button asp-page-handler="GetBlackoutScheduleForAddress">Відібрати графік відключень світла для адреси Бойченко 30.</button>
+</form>
+
+<form method="post">
+    <button asp-page-handler="GetGroupWithMaxCountBlackouts">Відібрати групу, якій найчастіше виключають світло в неділю.</button>
+</form>
+
+<form method="post">
+    <button asp-page-handler="GetGroupWithLongestTimeBlackouts">Відібрати групу, якій вимикають світло на найбільший час з понеділка по середу включно.</button>
+</form>
+
+<form method="post">
+    <button asp-page-handler="AssignGroupToAddress">Назначити на адресу Бажана 14 групу 4.</button>
+</form>
+
+<form method="post">
+    <button asp-page-handler="AddTwoNewAddresses">Додати 2 нові адреси будь-які.</button>
+</form>
+
+<form method="post">
+    <button asp-page-handler="AddNewBlackoutSchedule">Додати новий графік вимкнення будь-який.</button>
+</form>
