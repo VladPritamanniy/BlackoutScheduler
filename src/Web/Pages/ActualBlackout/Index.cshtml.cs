@@ -25,11 +25,11 @@ namespace Web.Pages.ActualBlackout
                 var isBlackout = await _groupService.ActualBlackoutByGroupId(groupId);
                 if (isBlackout)
                 {
-                    Result = "Світло є.";
+                    Result = "Світла нема.";
                 }
                 else
                 {
-                    Result = "Світла нема.";
+                    Result = "Світло є.";
                 }
             }
             catch (ArgumentNullException e)

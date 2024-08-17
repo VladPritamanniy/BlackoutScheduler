@@ -61,8 +61,8 @@ namespace Application.Services
                 throw new ArgumentNullException($"{nameof(result)}", $"Group not found by id {id}.");
             }
 
-            var actualTime = DateTime.UtcNow.Hour;
-            var isActualBlackout = result.Schedule.FinishTime.Hours > actualTime;
+            var actualTime = DateTime.Now.TimeOfDay;
+            var isActualBlackout = actualTime > result.Schedule.StartTime && actualTime < result.Schedule.FinishTime;
 
             return isActualBlackout;
         }
